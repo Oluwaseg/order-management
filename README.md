@@ -10,6 +10,7 @@ A RESTful API for managing orders in an e-commerce application, built with Node.
   - [Getting Started](#getting-started)
   - [API Documentation](#api-documentation)
   - [Database Schema](#database-schema)
+  - [Testing](#testing)
   - [Docker Usage (Optional)](#docker-usage-optional)
   - [Run the App](#run-the-app)
 
@@ -52,7 +53,7 @@ A RESTful API for managing orders in an e-commerce application, built with Node.
 The API documentation is available via Swagger. You can access it at:
 
 ```
-http:///api/v1/docs
+https://order-management-4an2.onrender.com/api/v1/docs/
 ```
 
 ![API Diagram](./api_diagram.png)
@@ -62,6 +63,29 @@ http:///api/v1/docs
 The database schema is designed to support order and user management efficiently.
 
 ![Database Schema](./database_diagram.png)
+
+## Testing
+
+To ensure the API works as expected, a suite of automated tests is provided. Follow these steps to run the tests:
+
+1. **Install testing dependencies (if not already installed):**
+
+   ```bash
+   npm install --save-dev supertest jest
+   ```
+
+2. **Run the tests:**
+
+   ```bash
+   npm test
+   ```
+
+Tests are located in the `tests` directory and cover the following functionalities:
+
+- User registration and login
+- Order creation, retrieval, updating, and deletion
+
+The tests can be configured and run with a separate test database to ensure data integrity during testing.
 
 ## Docker Usage (Optional)
 
@@ -89,4 +113,4 @@ To start the app without Docker:
 npm start
 ```
 
-The API will be available at ``.
+The API will be available at `https://order-management-4an2.onrender.com/`.
