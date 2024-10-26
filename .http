@@ -1,0 +1,50 @@
+### Register
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "sam",
+    "password": "sagemode2020"
+}
+
+### Login
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "username": "sam",
+    "password": "sagemode2020"
+}
+
+### Logout
+POST  http://localhost:5000/api/v1/auth/logout
+
+
+### Create a new order
+POST http://localhost:5000/api/v1/order
+Content-Type: application/json
+
+{
+    "productId": "12345",
+    "quantity": 2
+}
+
+### Get all orders
+GET http://localhost:5000/api/v1/order
+
+
+### Get order by id
+GET http://localhost:5000/api/v1/order/671c06b60cfdd3c16ef27240
+
+
+### Update order
+PUT http://localhost:5000/api/v1/order/671c06b60cfdd3c16ef27240
+Content-Type: application/json
+
+{
+    "status": "Shipped"
+}
+
+
+### Delete order
+DELETE http://localhost:5000/api/v1/order/671c06b60cfdd3c16ef27240
